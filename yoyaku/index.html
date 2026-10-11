@@ -187,7 +187,7 @@
   <section>
     <h2><span class="step">2</span>ご希望の日時を選ぶ</h2>
     <div id="days" class="days"><p class="loading">空き状況を読み込んでいます…</p></div>
-    <p class="hint" id="slot-hint">ご予約は1回2時間の枠でお取りしています。</p>
+    <p class="hint" id="slot-hint">ご予約は1回2時間30分です（カウンセリング・お着替えの時間を含みます）。</p>
     <button type="button" class="other-btn" id="other-btn">ご都合の合う日時がない方・まずは相談したい方</button>
   </section>
 
@@ -259,8 +259,8 @@ const CONFIG = {
   DAYS_AHEAD: 30,
   // 開始まで何時間を切った枠は表示しないか（直前の予約を防ぐ）
   HIDE_WITHIN_HOURS: 3,
-  // 1回の予約の長さ（分）。表の「開始〜終了」をこの長さで区切って表示します
-  SLOT_MINUTES: 120,
+  // 1回の予約の長さ（分）。施術2時間＋カウンセリング・お着替え30分。表の「開始〜終了」をこの長さで区切って表示します
+  SLOT_MINUTES: 150,
 };
 
 // メニュー。key はスプレッドシートの「メニュー」列に書く名前
