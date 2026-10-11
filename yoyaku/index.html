@@ -187,7 +187,7 @@
   <section>
     <h2><span class="step">2</span>ご希望の日時を選ぶ</h2>
     <div id="days" class="days"><p class="loading">空き状況を読み込んでいます…</p></div>
-    <p class="hint" id="slot-hint">ご予約は1回2時間30分です（カウンセリング・お着替えの時間を含みます）。</p>
+    <p class="hint" id="slot-hint">ご予約は1回2時間の枠でお取りしています。</p>
     <button type="button" class="other-btn" id="other-btn">ご都合の合う日時がない方・まずは相談したい方</button>
   </section>
 
@@ -259,14 +259,14 @@ const CONFIG = {
   DAYS_AHEAD: 30,
   // 開始まで何時間を切った枠は表示しないか（直前の予約を防ぐ）
   HIDE_WITHIN_HOURS: 3,
-  // 1回の予約の長さ（分）。施術2時間＋カウンセリング・お着替え30分。表の「開始〜終了」をこの長さで区切って表示します
-  SLOT_MINUTES: 150,
+  // 1回の予約の長さ（分）。表の「開始〜終了」をこの長さで区切って表示します
+  SLOT_MINUTES: 120,
 };
 
 // メニュー。key はスプレッドシートの「メニュー」列に書く名前
 const MENUS = [
-  { key: "FemCare",  name: "FemCare",   sub: "フェムケア（30分）",                 c: "#d66a8a", soft: "#fbeef0", trial: "7,700",  trialNote: "初回お試し" },
-  { key: "BodyCare", name: "Body Care", sub: "メディセル筋膜ケア（60分）",       c: "#2e6db4", soft: "#eaf2fb", trial: "10,000", trialNote: "初回お試し（所要90分・施術60分）" },
+  { key: "FemCare",  name: "FemCare",   sub: "フェムケア・所要60分",              c: "#d66a8a", soft: "#fbeef0", trial: "7,700",  trialNote: "初回お試し（所要60分・施術30分）" },
+  { key: "BodyCare", name: "Body Care", sub: "筋膜ケア・所要90分",              c: "#2e6db4", soft: "#eaf2fb", trial: "10,000", trialNote: "初回お試し（所要90分・施術60分）" },
   { key: "炭酸美容", name: "炭酸美容",  sub: "お試し無料",                         c: "#3f9b84", soft: "#e8f5f1", trial: "無料",   trialNote: "初回お試し（ケア用品を販売しています）" },
   { key: "相談",     name: "相談して決める", sub: "当日のカウンセリングで", c: "#8a746c", soft: "#f5eeea" },
 ];
